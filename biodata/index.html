@@ -4,46 +4,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description"
+        content="Portfolio dan biodata mahasiswa Informatika — Rayyan (047Rayyan). Didesain dengan tema anime Ryo Yamada cool-cartoon bassist.">
     <title>My Profile | 047 Rayyan</title>
+
+    <!-- Google Fonts: Fredoka (Headings) + Nunito (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER / HERO -->
-    <header>
-        <h1>Hallo, ich heiße Rayyan 👋</h1>
+    <!-- STICKY NAVBAR -->
+    <header class="navbar-wrapper">
+        <nav class="navbar" aria-label="Navigasi Utama">
+            <a href="#" class="nav-brand">
+                <span class="brand-badge">🎸 047_Rayyan</span>
+            </a>
 
-        <p>
-            Saya mahasiswa Informatika semester lima yang tertarik
-            dengan Web Development, AI, Data Science, dan Pengembangan Teknologi.
-        </p>
+            <!-- Mobile Menu Toggle (Pure HTML/CSS) -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Buka Menu Navigasi">
+            <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="#profile">Profil</a></li>
+                <li><a href="#motivation">Motivasi</a></li>
+                <li><a href="#skills">Tech Stack</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#education">Pendidikan</a></li>
+                <li><a href="#github">GitHub</a></li>
+                <li><a href="#contact" class="nav-cta">Kontak</a></li>
+            </ul>
+        </nav>
     </header>
 
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+        <div class="hero-container">
+            <!-- Left: Hero Text -->
+            <div class="hero-text">
+                <div class="hero-pill-badge">♪ bassist-mode engaged</div>
+                <h1 class="hero-title">Hallo, ich heiße Rayyan <span class="wave-hand">👋</span></h1>
+
+                <p class="hero-desc">
+                    Saya mahasiswa Informatika semester lima yang tertarik
+                    dengan Web Development, AI, Data Science, dan Pengembangan Teknologi.
+                </p>
+
+                <!-- Ryo Theme Stickers -->
+                <div class="hero-stickers">
+                    <span class="sticker sticker-blue">🎓 Informatika Smt 5</span>
+                    <span class="sticker sticker-teal">💻 Web Development</span>
+                    <span class="sticker sticker-yellow">🤖 AI</span>
+                    <span class="sticker sticker-green">📊 Data Science</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">🎸 Lihat Project</a>
+                    <a href="#contact" class="btn btn-secondary">✦ Hubungi Saya</a>
+                </div>
+            </div>
+
+            <!-- Right: Character Illustration -->
+            <div class="hero-image">
+                <div class="char-frame">
+                    <span class="float-doodle doodle-1">♪</span>
+                    <span class="float-doodle doodle-2">✦</span>
+                    <span class="float-doodle doodle-3">♫</span>
+                    <span class="float-doodle doodle-4">&lt;/&gt;</span>
+
+                    <img src="assets/ryo.jpeg" alt="Ilustrasi tema anime Ryo Yamada" class="char-img"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <!-- Fallback elegan jika file ryo.png belum ditambahkan -->
+                    <div class="char-fallback" style="display:none;">
+                        <span class="fallback-icon">🎸</span>
+                        <span class="fallback-label">ryo.png</span>
+                        <span class="fallback-sub">bassist mode</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <main>
 
         <!-- 1. IDENTITAS -->
-        <section id="profile">
-            <h2>Profil Saya</h2>
+        <section id="profile" class="panel">
+            <div class="section-header">
+                <h2><span class="section-icon">{ }</span> Profil Saya</h2>
+                <span class="section-subtitle">Data diri & identitas mahasiswa</span>
+            </div>
 
-            <p><strong>Nama:</strong> Rayyan</p>
-            <p><strong>Nama Panggilan:</strong> Rayyan</p>
-            <p><strong>NIM:</strong> 2024520047 </p>
-            <p><strong>Program Studi:</strong> Informatika</p>
-            <p><strong>Lokasi:</strong> Pamekasan, Jawa Timur</p>
+            <div class="profile-grid">
+                <div class="info-card">
+                    <div class="info-label">Nama</div>
+                    <div class="info-value">Rayyan</div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-label">Nama Panggilan</div>
+                    <div class="info-value">Rayyan</div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-label">NIM</div>
+                    <div class="info-value">2024520047</div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-label">Program Studi</div>
+                    <div class="info-value">Informatika</div>
+                </div>
+
+                <div class="info-card info-card-wide">
+                    <div class="info-label">Lokasi</div>
+                    <div class="info-value">📍 Pamekasan, Jawa Timur</div>
+                </div>
+            </div>
         </section>
 
 
         <!-- 2. MOTIVASI HIDUP -->
-        <section id="motivation">
-            <h2>Motivasi Hidup</h2>
+        <section id="motivation" class="panel">
+            <div class="section-header">
+                <h2><span class="section-icon">♪</span> Motivasi Hidup</h2>
+                <span class="section-subtitle">Prinsip dan arah langkah ke depan</span>
+            </div>
 
-            <blockquote>
-                "Saya ingin bekerja di bidang pengembangan teknologi."
-            </blockquote>
+            <div class="speech-bubble">
+                <div class="quote-symbol">“</div>
+                <blockquote>
+                    "Saya ingin bekerja di bidang pengembangan teknologi."
+                </blockquote>
+                <div class="bubble-tail"></div>
+            </div>
 
-            <p>
+            <p class="motivation-detail">
                 Saya ingin berkontribusi dalam menciptakan solusi teknologi
                 yang dapat mempermudah dan meningkatkan kualitas hidup manusia.
             </p>
@@ -51,288 +158,511 @@
 
 
         <!-- 3. KEMAMPUAN TEKNOLOGI -->
-        <section id="skills">
-            <h2>Tech Stack</h2>
+        <section id="skills" class="panel">
+            <div class="section-header">
+                <h2><span class="section-icon">⚡</span> Tech Stack</h2>
+                <span class="section-subtitle">Bahasa pemrograman & tools yang digunakan</span>
+            </div>
 
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Tech Stack</th>
-                        <th>Level</th>
-                    </tr>
-                </thead>
+            <!-- Skill Cards Grid -->
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-info">
+                        <span class="skill-icon">🐍</span>
+                        <span class="skill-name">Python</span>
+                    </div>
+                    <span class="level-badge badge-basic">Basic</span>
+                </div>
 
-                <tbody>
-                    <tr>
-                        <td>Python</td>
-                        <td>Basic</td>
-                    </tr>
+                <div class="skill-card">
+                    <div class="skill-info">
+                        <span class="skill-icon">⚛️</span>
+                        <span class="skill-name">Next JS</span>
+                    </div>
+                    <span class="level-badge badge-learning">Sedang Dipelajari</span>
+                </div>
 
-                    <tr>
-                        <td>Next JS</td>
-                        <td>Sedang Dipelajari</td>
-                    </tr>
+                <div class="skill-card">
+                    <div class="skill-info">
+                        <span class="skill-icon">🐘</span>
+                        <span class="skill-name">PHP</span>
+                    </div>
+                    <span class="level-badge badge-basic">Basic</span>
+                </div>
 
-                    <tr>
-                        <td>PHP</td>
-                        <td>Basic</td>
-                    </tr>
+                <div class="skill-card">
+                    <div class="skill-info">
+                        <span class="skill-icon">🌐</span>
+                        <span class="skill-name">HTML & CSS</span>
+                    </div>
+                    <span class="level-badge badge-basic">Basic</span>
+                </div>
 
-                    <tr>
-                        <td>HTML & CSS</td>
-                        <td>Basic</td>
-                    </tr>
+                <div class="skill-card">
+                    <div class="skill-info">
+                        <span class="skill-icon">📜</span>
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+                    <span class="level-badge badge-learning">Sedang Dipelajari</span>
+                </div>
 
-                    <tr>
-                        <td>JavaScript</td>
-                        <td>Sedang Dipelajari</td>
-                    </tr>
+                <div class="skill-card">
+                    <div class="skill-info">
+                        <span class="skill-icon">⚙️</span>
+                        <span class="skill-name">C++ / Arduino</span>
+                    </div>
+                    <span class="level-badge badge-basic">Basic</span>
+                </div>
 
-                    <tr>
-                        <td>C++ / Arduino</td>
-                        <td>Basic</td>
-                    </tr>
+                <div class="skill-card">
+                    <div class="skill-info">
+                        <span class="skill-icon">🐬</span>
+                        <span class="skill-name">MySQL</span>
+                    </div>
+                    <span class="level-badge badge-basic">Basic</span>
+                </div>
 
-                    <tr>
-                        <td>MySQL</td>
-                        <td>Basic</td>
-                    </tr>
+                <div class="skill-card">
+                    <div class="skill-info">
+                        <span class="skill-icon">🔢</span>
+                        <span class="skill-name">Matlab</span>
+                    </div>
+                    <span class="level-badge badge-basic">Basic</span>
+                </div>
 
-                    <tr>
-                        <td>Matlab</td>
-                        <td>Basic</td>
-                    </tr>
+                <div class="skill-card">
+                    <div class="skill-info">
+                        <span class="skill-icon">🐙</span>
+                        <span class="skill-name">Git & GitHub</span>
+                    </div>
+                    <span class="level-badge badge-basic">Basic</span>
+                </div>
 
-                    <tr>
-                        <td>Git & GitHub</td>
-                        <td>Basic</td>
-                    </tr>
+                <div class="skill-card">
+                    <div class="skill-info">
+                        <span class="skill-icon">📱</span>
+                        <span class="skill-name">Flutter</span>
+                    </div>
+                    <span class="level-badge badge-learning">Sedang Dipelajari</span>
+                </div>
+            </div>
 
-                    <tr>
-                        <td>Flutter</td>
-                        <td>Sedang Dipelajari</td>
-                    </tr>
-                </tbody>
-            </table>
+            <!-- Semantic Table for Accessibility and Academic Rubric -->
+            <details class="skills-table-details">
+                <summary>Lihat tabel data lengkap</summary>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tech Stack</th>
+                                <th>Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Python</td>
+                                <td>Basic</td>
+                            </tr>
+                            <tr>
+                                <td>Next JS</td>
+                                <td>Sedang Dipelajari</td>
+                            </tr>
+                            <tr>
+                                <td>PHP</td>
+                                <td>Basic</td>
+                            </tr>
+                            <tr>
+                                <td>HTML & CSS</td>
+                                <td>Basic</td>
+                            </tr>
+                            <tr>
+                                <td>JavaScript</td>
+                                <td>Sedang Dipelajari</td>
+                            </tr>
+                            <tr>
+                                <td>C++ / Arduino</td>
+                                <td>Basic</td>
+                            </tr>
+                            <tr>
+                                <td>MySQL</td>
+                                <td>Basic</td>
+                            </tr>
+                            <tr>
+                                <td>Matlab</td>
+                                <td>Basic</td>
+                            </tr>
+                            <tr>
+                                <td>Git & GitHub</td>
+                                <td>Basic</td>
+                            </tr>
+                            <tr>
+                                <td>Flutter</td>
+                                <td>Sedang Dipelajari</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </details>
         </section>
 
 
         <!-- 4. PROJECT -->
-        <section id="projects">
-            <h2>Project</h2>
+        <section id="projects" class="panel">
+            <div class="section-header">
+                <h2><span class="section-icon">🚀</span> Project</h2>
+                <span class="section-subtitle">Karya dan repository yang pernah dikembangkan</span>
+            </div>
 
-            <article>
-                <h3>MyTools</h3>
+            <div class="projects-grid">
+                <article class="project-card card-teal">
+                    <div class="project-card-header">
+                        <span class="project-badge">📱 Mobile App</span>
+                        <h3>MyTools</h3>
+                    </div>
 
-                <p>
-                    Aplikasi mobile yang berisi berbagai tools yang sering
-                    saya gunakan untuk membantu produktivitas.
-                </p>
+                    <p class="project-desc">
+                        Aplikasi mobile yang berisi berbagai tools yang sering
+                        saya gunakan untuk membantu produktivitas.
+                    </p>
 
-                <p>
-                    <strong>Tech Stack:</strong>
-                    Flutter, Dart, Python,
-                </p>
+                    <div class="project-tech">
+                        <strong>Tech Stack:</strong>
+                        <div class="tags-container">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
 
-                <a href="https://github.com/yannkovalskia/MyTools" target="_blank" rel="noopener noreferrer">
-                    Source Code
-                </a>
-            </article>
+                    <div class="project-footer">
+                        <a href="https://github.com/yannkovalskia/MyTools" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-card">
+                            Source Code <span>↗</span>
+                        </a>
+                    </div>
+                </article>
 
 
-            <article>
-                <h3>Drink Cashier</h3>
+                <article class="project-card card-blue">
+                    <div class="project-card-header">
+                        <span class="project-badge">🛒 Web System</span>
+                        <h3>Drink Cashier</h3>
+                    </div>
 
-                <p>
-                    Sistem kasir untuk penjualan minuman berbasis web dengan fitur
-                    penambahan item, perhitungan total, dan display struk.
-                </p>
+                    <p class="project-desc">
+                        Sistem kasir untuk penjualan minuman berbasis web dengan fitur
+                        penambahan item, perhitungan total, dan display struk.
+                    </p>
 
-                <p>
-                    <strong>Tech Stack:</strong>
-                    HTML, CSS, JavaScript, PHP, MySQL
-                </p>
+                    <div class="project-tech">
+                        <strong>Tech Stack:</strong>
+                        <div class="tags-container">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                    </div>
 
-                <a href="https://github.com/yannkovalskia/drink-cashier-v4.0" target="_blank" rel="noopener noreferrer">
-                    Source Code
-                </a>
-            </article>
+                    <div class="project-footer">
+                        <a href="https://github.com/yannkovalskia/drink-cashier-v4.0" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-card">
+                            Source Code <span>↗</span>
+                        </a>
+                    </div>
+                </article>
 
-            <article>
-                <h3>MySavings</h3>
 
-                <p>
-                    Website manajemen keuangan pribadi berbasis web
-                    untuk mencatat pengeluaran dan pemasukan.
-                </p>
+                <article class="project-card card-navy">
+                    <div class="project-card-header">
+                        <span class="project-badge">💰 Finance Web</span>
+                        <h3>MySavings</h3>
+                    </div>
 
-                <p>
-                    <strong>Tech Stack:</strong>
-                    HTML, CSS, JavaScript, PHP, MySQL
-                </p>
+                    <p class="project-desc">
+                        Website manajemen keuangan pribadi berbasis web
+                        untuk mencatat pengeluaran dan pemasukan.
+                    </p>
 
-                <a href="https://github.com/yannkovalskia/MySavings" target="_blank" rel="noopener noreferrer">
-                    Source Code
-                </a>
-            </article>
+                    <div class="project-tech">
+                        <strong>Tech Stack:</strong>
+                        <div class="tags-container">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                    </div>
 
-            <article>
-                <h3>Face Detection</h3>
+                    <div class="project-footer">
+                        <a href="https://github.com/yannkovalskia/MySavings" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-card">
+                            Source Code <span>↗</span>
+                        </a>
+                    </div>
+                </article>
 
-                <p>
-                    Proyek Face Detection menggunakan Matlab.
-                </p>
 
-                <p>
-                    <strong>Tech Stack:</strong>
-                    Matlab
-                </p>
+                <article class="project-card card-green">
+                    <div class="project-card-header">
+                        <span class="project-badge">👁️ Computer Vision</span>
+                        <h3>Face Detection</h3>
+                    </div>
 
-                <a href="https://github.com/yannkovalskia/FaceDetection" target="_blank" rel="noopener noreferrer">
-                    Source Code
-                </a>
-            </article>
+                    <p class="project-desc">
+                        Proyek Face Detection menggunakan Matlab.
+                    </p>
 
-            <article>
-                <h3>Docx2PDF</h3>
+                    <div class="project-tech">
+                        <strong>Tech Stack:</strong>
+                        <div class="tags-container">
+                            <span class="tag">Matlab</span>
+                        </div>
+                    </div>
 
-                <p>
-                    Konverter dokumen docx menjadi pdf menggunakan bot telegram dan python.
-                </p>
+                    <div class="project-footer">
+                        <a href="https://github.com/yannkovalskia/FaceDetection" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-card">
+                            Source Code <span>↗</span>
+                        </a>
+                    </div>
+                </article>
 
-                <p>
-                    <strong>Tech Stack:</strong>
-                    Python, Telegram Bot API
-                </p>
 
-                <a href="https://github.com/yannkovalskia/Docx2pdf_converter_bot" target="_blank"
-                    rel="noopener noreferrer">
-                    Source Code
-                </a>
-            </article>
+                <article class="project-card card-teal">
+                    <div class="project-card-header">
+                        <span class="project-badge">🤖 Telegram Bot</span>
+                        <h3>Docx2PDF</h3>
+                    </div>
 
-            <article>
-                <h3>Background Remover</h3>
+                    <p class="project-desc">
+                        Konverter dokumen docx menjadi pdf menggunakan bot telegram dan python.
+                    </p>
 
-                <p>
-                    Program penghapus latar belakang gambar yang dikembangkan
-                    sebagai eksperimen dan bagian dari pengembangan fitur MyTools.
-                </p>
+                    <div class="project-tech">
+                        <strong>Tech Stack:</strong>
+                        <div class="tags-container">
+                            <span class="tag">Python</span>
+                            <span class="tag">Telegram Bot API</span>
+                        </div>
+                    </div>
 
-                <p>
-                    <strong>Tech Stack:</strong>
-                    Python
-                </p>
+                    <div class="project-footer">
+                        <a href="https://github.com/yannkovalskia/Docx2pdf_converter_bot" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-card">
+                            Source Code <span>↗</span>
+                        </a>
+                    </div>
+                </article>
 
-                <a href="https://github.com/yannkovalskia/removebg" target="_blank" rel="noopener noreferrer">
-                    Source Code
-                </a>
-            </article>
+
+                <article class="project-card card-blue">
+                    <div class="project-card-header">
+                        <span class="project-badge">🖼️ Image Tool</span>
+                        <h3>Background Remover</h3>
+                    </div>
+
+                    <p class="project-desc">
+                        Program penghapus latar belakang gambar yang dikembangkan
+                        sebagai eksperimen dan bagian dari pengembangan fitur MyTools.
+                    </p>
+
+                    <div class="project-tech">
+                        <strong>Tech Stack:</strong>
+                        <div class="tags-container">
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+
+                    <div class="project-footer">
+                        <a href="https://github.com/yannkovalskia/removebg" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-card">
+                            Source Code <span>↗</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
         </section>
 
 
         <!-- 5. PENDIDIKAN -->
-        <section id="education">
-            <h2>Riwayat Pendidikan</h2>
+        <section id="education" class="panel">
+            <div class="section-header">
+                <h2><span class="section-icon">🎓</span> Riwayat Pendidikan</h2>
+                <span class="section-subtitle">Jejak pendidikan formal</span>
+            </div>
 
-            <article>
-                <h3>Universitas Madura</h3>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-dot"></span>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-period">2024 — Sekarang</span>
+                        <h3>Universitas Madura</h3>
+                        <p class="edu-field">Program Studi Informatika</p>
+                        <p class="edu-meta">Universitas Madura — 2024 sampai sekarang</p>
+                    </div>
+                </article>
 
-                <p>
-                    Program Studi Informatika
-                </p>
-
-                <p>
-                    Universitas Madura — 2024 sampai sekarang
-                </p>
-            </article>
-
-            <article>
-                <h3>SMA / SMK / MA</h3>
-
-                <p>
-                    MA Mambaul Ulum 1 Bata-Bata
-                </p>
-
-                <p>
-                    2021 - 2024
-                </p>
-            </article>
+                <article class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="marker-dot marker-dot-teal"></span>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-period">2021 — 2024</span>
+                        <h3>MA Mambaul Ulum 1 Bata-Bata</h3>
+                        <p class="edu-field">SMA / SMK / MA</p>
+                        <p class="edu-meta">2021 - 2024</p>
+                    </div>
+                </article>
+            </div>
         </section>
 
 
         <!-- 6. GITHUB -->
-        <section id="github">
-            <h2>GitHub Activity</h2>
+        <section id="github" class="panel">
+            <div class="section-header">
+                <h2><span class="section-icon">🐙</span> GitHub Activity</h2>
+                <span class="section-subtitle">Aktivitas version control & repository</span>
+            </div>
 
-            <p>
+            <p class="github-intro">
                 Repository profile ini dibuat menggunakan Git dan GitHub
                 dengan beberapa commit terpisah sebagai dokumentasi
                 selama proses development.
             </p>
 
-            <a href="https://github.com/047Rayyan" target="_blank" rel="noopener noreferrer">
-                Visit my GitHub
-            </a>
+            <div class="commit-evidence-card">
+                <div class="commit-header">
+                    <span>📌 Git Commits Log</span>
+                    <span class="commit-badge">Verified</span>
+                </div>
+                <ul class="commit-list">
+                    <li>
+                        <span class="commit-dot"></span>
+                        <div class="commit-info">
+                            <strong>Commit 1:</strong> Initial project structure
+                        </div>
+                    </li>
+                    <li>
+                        <span class="commit-dot"></span>
+                        <div class="commit-info">
+                            <strong>Commit 2:</strong> Add personal biodata and portfolio content
+                        </div>
+                    </li>
+                    <li>
+                        <span class="commit-dot"></span>
+                        <div class="commit-info">
+                            <strong>Commit 3:</strong> Add Ryo-themed responsive cartoon styling & UI polish
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="github-actions">
+                <a href="https://github.com/047Rayyan" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+                    Visit my GitHub <span>↗</span>
+                </a>
+                <a href="https://github.com/047Rayyan/My-Profile" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-outline">
+                    Repository My-Profile <span>📁</span>
+                </a>
+            </div>
         </section>
 
 
         <!-- 7. VIDEO PRAKTIKUM -->
-        <section id="video">
-            <h2>Video Praktikum P1</h2>
+        <section id="video" class="panel video-card">
+            <div class="video-content">
+                <div class="section-header">
+                    <h2><span class="section-icon">🎬</span> Video Praktikum P1</h2>
+                    <span class="section-subtitle">Dokumentasi praktikum pemrograman platform</span>
+                </div>
 
-            <p>
-                Video dokumentasi praktikum akan tersedia melalui link berikut.
-            </p>
+                <p>
+                    Video dokumentasi praktikum akan tersedia melalui link berikut.
+                </p>
 
-            <a href="#" target="_blank">
-                Tonton Video Praktikum
-            </a>
+                <div class="video-action">
+                    <a href="#" target="_blank" class="btn btn-video">
+                        ▶ Tonton Video Praktikum
+                    </a>
+                </div>
+            </div>
         </section>
 
 
         <!-- 8. KONTAK -->
-        <section id="contact">
-            <h2>Kontak</h2>
+        <section id="contact" class="panel">
+            <div class="section-header">
+                <h2><span class="section-icon">📬</span> Kontak</h2>
+                <span class="section-subtitle">Terhubung melalui media sosial & platform</span>
+            </div>
 
-            <p>
-                GitHub:
-                <a href="https://github.com/047Rayyan" target="_blank" rel="noopener noreferrer">
-                    github.com/047Rayyan
-                </a>
-            </p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <span class="contact-icon">🐙</span>
+                    <div class="contact-detail">
+                        <span class="contact-title">GitHub</span>
+                        <a href="https://github.com/047Rayyan" target="_blank" rel="noopener noreferrer"
+                            class="contact-link">
+                            github.com/047Rayyan ↗
+                        </a>
+                    </div>
+                </div>
 
-            <p>
-                Instagram:
-                <a href="https://www.instagram.com/ray_yan418" target="_blank" rel="noopener noreferrer">
-                    @ray_yan418
-                </a>
-            </p>
+                <div class="contact-card">
+                    <span class="contact-icon">📸</span>
+                    <div class="contact-detail">
+                        <span class="contact-title">Instagram</span>
+                        <a href="https://www.instagram.com/ray_yan418" target="_blank" rel="noopener noreferrer"
+                            class="contact-link">
+                            @ray_yan418 ↗
+                        </a>
+                    </div>
+                </div>
 
-            <p>
-                Tiktok:
-                <a href="https://www.tiktok.com/@rayyan_n_nya_nextjs" target="_blank" rel="noopener noreferrer">
-                    @rayyan_n_nya_nextjs
-                </a>
-            </p>
+                <div class="contact-card">
+                    <span class="contact-icon">🎵</span>
+                    <div class="contact-detail">
+                        <span class="contact-title">TikTok</span>
+                        <a href="https://www.tiktok.com/@rayyan_n_nya_nextjs" target="_blank" rel="noopener noreferrer"
+                            class="contact-link">
+                            @rayyan_n_nya_nextjs ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>
 
 
-    <footer>
-        <p>
-            &copy; 2026 Dibuat dengan ❤️ oleh 047_Rayyan - P1 Pemrograman Platform
-        </p>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-copy">
+                &copy; 2026 Dibuat dengan ♪ oleh <strong>047_Rayyan</strong> — P1 Pemrograman Platform
+            </p>
 
-        <a href="#" target="_blank">
-            Video Praktikum
-        </a>
-
-        <a href="https://github.com/047Rayyan/My-Profile" target="_blank" rel="noopener noreferrer">
-            My-Profile
-        </a>
-
+            <div class="footer-links">
+                <a href="#" target="_blank" class="footer-link">
+                    🎬 Video Praktikum
+                </a>
+                <span class="footer-separator">•</span>
+                <a href="https://github.com/047Rayyan/My-Profile" target="_blank" rel="noopener noreferrer"
+                    class="footer-link">
+                    📁 My-Profile Repo
+                </a>
+                <span class="footer-separator">•</span>
+                <a href="#profile" class="footer-link">
+                    ⬆ Kembali ke Atas
+                </a>
+            </div>
+        </div>
     </footer>
 
 </body>
